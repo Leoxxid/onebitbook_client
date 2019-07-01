@@ -4,7 +4,7 @@ import 'package:onebitbook_client/components/ButtonGoToRegisterBookComponent.dar
 import 'package:onebitbook_client/services/Repository.dart';
 
 class BookListScreen extends StatefulWidget {
-  final Repository _repository;
+  // final Repository _repository;
 
   @override
   _BuildListState createState() => _BuildListState();
