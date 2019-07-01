@@ -15,6 +15,9 @@ class RegisterBookScreenState extends State<RegisterBookScreen> {
   final typeTheNameOfAuthor = "Digite o nome do Autor";
   final nameOfTheAuthor = "Nome do Autor";
 
+  final typeTheNameOfBook = "Digite o nome do Livro";
+  final nameOfTheBook = "Nome do Livro";
+
   // final  = "Digite o nome do autor";
   // final placeholderBook = "Digite o nome do livro";
 
@@ -30,7 +33,10 @@ class RegisterBookScreenState extends State<RegisterBookScreen> {
             horizontal: 32.0,
           ),
           child: Column(
-            children: [InputComponent(typeTheNameOfAuthor, nameOfTheAuthor)],
+            children: [
+              InputComponent(typeTheNameOfAuthor, nameOfTheAuthor),
+              InputComponent(typeTheNameOfBook, nameOfTheBook)
+            ],
           ),
         ),
       ),
