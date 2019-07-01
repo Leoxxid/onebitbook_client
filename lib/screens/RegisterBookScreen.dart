@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:onebitbook_client/components/InputComponent.dart';
+import 'package:onebitbook_client/components/ButtonRegisterBookComponent.dart';
 
 class RegisterBookScreen extends StatefulWidget {
   @override
@@ -31,7 +32,8 @@ class RegisterBookScreenState extends State<RegisterBookScreen> {
           child: Column(
             children: [
               InputComponent(typeTheNameOfAuthor, nameOfTheAuthor),
-              InputComponent(typeTheNameOfBook, nameOfTheBook)
+              InputComponent(typeTheNameOfBook, nameOfTheBook),
+              ButtonRegisterBookComponent()
             ],
           ),
         ),
