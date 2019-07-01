@@ -5,6 +5,7 @@ import 'package:onebitbook_client/screens/RegisterBookScreen.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     title: 'OnebitBook',
     initialRoute: '/',
     routes: {
