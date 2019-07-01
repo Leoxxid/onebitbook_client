@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ButtonRegisterBookComponent extends StatelessWidget {
+class ButtonGoToRegisterBookComponent extends StatelessWidget {
   void _navigateToRegisterBook(context) {
     Navigator.pushNamed(context, '/registerBook');
   }

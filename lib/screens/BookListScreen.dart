@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:onebitbook_client/components/BookListComponent.dart';
-import 'package:onebitbook_client/components/ButtonRegisterBookComponent.dart';
+import 'package:onebitbook_client/components/ButtonGoToRegisterBookComponent.dart';
 
 class BookListScreen extends StatelessWidget {
   final titleScreen = "Lista de Livros";
@@ -12,7 +12,7 @@ class BookListScreen extends StatelessWidget {
         title: Text(titleScreen),
       ),
       body: Center(child: BookListComponent()),
-      floatingActionButton: ButtonRegisterBookComponent(),
+      floatingActionButton: ButtonGoToRegisterBookComponent(),
     );
   }
 }
