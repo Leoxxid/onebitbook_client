@@ -17,12 +17,18 @@ class BookListScreen extends StatelessWidget {
   }
 
   buildListOfBooks(context) {
-    return ListView(
-      children: <Widget>[
-        Text("Titulo"),
-        Text("Titulo"),
-        Text("Titulo"),
-      ],
+    return ListView.builder(
+      itemBuilder: (context, position) {
+        return Card(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Text(
+              position.toString(),
+              style: TextStyle(fontSize: 22.0),
+            ),
+          ),
+        );
+      },
     );
   }
 
