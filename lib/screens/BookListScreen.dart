@@ -16,6 +16,16 @@ class BookListScreen extends StatelessWidget {
     );
   }
 
+  buildListOfBooks(context) {
+    return ListView(
+      children: <Widget>[
+        Text("Titulo"),
+        Text("Titulo"),
+        Text("Titulo"),
+      ],
+    );
+  }
+
   @override
   @override
   Widget build(BuildContext context) {
@@ -23,16 +33,7 @@ class BookListScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(titleScreen),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-          ],
-        ),
-      ),
+      body: Center(child: buildListOfBooks(context)),
       floatingActionButton: buildFloatButtonRegisterBook(context),
     );
   }
