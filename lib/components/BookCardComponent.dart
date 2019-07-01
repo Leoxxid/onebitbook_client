@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+enum ConfirmAction { CANCEL, ACCEPT }
 
 class BookCardComponent extends StatelessWidget {
   final edit = 'Editar';
@@ -6,7 +7,34 @@ class BookCardComponent extends StatelessWidget {
 
   _updateBook() {}
 
-  _deleteBook() {}
+ 
+  Future<ConfirmAction> _asyncDeleteBook(BuildContext context) async {
+    return showDialog<ConfirmAction>(
+      context: context,
+      barrierDismissible: false, // user must tap button for close dialog!
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Delete book?'),
+          content: const Text(
+              'This will destroy this book'),
+          actions: <Widget>[
+            FlatButton(
+              child: const Text('CANCEL'),
+              onPressed: () {
+                Navigator.of(context).pop(ConfirmAction.CANCEL);
+              },
+            ),
+            FlatButton(
+              child: const Text('ACCEPT'),
+              onPressed: () {
+                Navigator.of(context).pop(ConfirmAction.ACCEPT);
+              },
+            )
+          ],
+        );
+      },
+    );
+  }
 
   _showBookDetails(context) {
     Navigator.pushNamed(context, '/bookDetail');
@@ -36,7 +64,7 @@ class BookCardComponent extends StatelessWidget {
                 ),
                 FlatButton(
                   child: Text(delete),
-                  onPressed: () {/* ... */},
+                  onPressed: () {_asyncDeleteBook(context);},
                 ),
               ],
             ),
