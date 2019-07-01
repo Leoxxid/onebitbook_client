@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class BookDetailScreen extends StatelessWidget {
+  final bookDetail = 'Detalhes do Livro';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('First Screen'),
+        title: Text(bookDetail),
       ),
       body: Center(
         child: RaisedButton(

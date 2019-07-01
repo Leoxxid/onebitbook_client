@@ -17,7 +17,7 @@ class BookCardComponent extends StatelessWidget {
     return Card(
         child: new InkWell(
       onTap: () {
-        print("tapped");
+        _showBookDetails(context);
       },
       child: Column(
         mainAxisSize: MainAxisSize.min,
