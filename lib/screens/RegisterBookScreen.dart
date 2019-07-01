@@ -9,7 +9,6 @@ class RegisterBookScreen extends StatefulWidget {
 }
 
 class RegisterBookScreenState extends State<RegisterBookScreen> {
-  final _formKey = GlobalKey<FormState>();
   final registerBook = "Cadastre um Livro";
 
   final typeTheNameOfAuthor = "Digite o nome do Autor";
@@ -17,9 +16,6 @@ class RegisterBookScreenState extends State<RegisterBookScreen> {
 
   final typeTheNameOfBook = "Digite o nome do Livro";
   final nameOfTheBook = "Nome do Livro";
-
-  // final  = "Digite o nome do autor";
-  // final placeholderBook = "Digite o nome do livro";
 
   Widget build(BuildContext context) {
     return Scaffold(
