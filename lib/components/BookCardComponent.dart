@@ -4,9 +4,21 @@ class BookCardComponent extends StatelessWidget {
   final edit = 'Editar';
   final delete = 'Deletar';
 
+  _updateBook() {}
+
+  _deleteBook() {}
+
+  _showBookDetails(context) {
+    Navigator.pushNamed(context, '/bookDetail');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Card(
+        child: new InkWell(
+      onTap: () {
+        print("tapped");
+      },
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
@@ -31,6 +43,6 @@ class BookCardComponent extends StatelessWidget {
           ),
         ],
       ),
-    );
+    ));
   }
 }
